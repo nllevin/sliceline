@@ -37,7 +37,7 @@
   }
 }
 
-body, header, footer, h1, div {
+body, header, footer, h1, div, img, button {
   margin: 0;
   padding: 0;
   border: 0;

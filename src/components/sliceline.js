@@ -6,19 +6,23 @@ import pizzaIcon from "../assets/pizza_slice.png";
 
 const Sliceline = () => {
   const [started, setStarted] = useState(false);
-
-  const [coords, setCoords] = useState(null);
-  useEffect(() => {
-    navigator.geolocation.watchPosition(({ coords }) => setCoords(coords));
-  });
-
   const [venues, setVenues] = useState(null);
+
+  useEffect(() => {
+    navigator.geolocation.watchPosition(({ coords }) => {
+      fetchVenues(coords)
+        .then(({ data }) => {
+          setVenues(data.response.venues);
+        })
+        .catch(err => console.log(err));
+    });
+  });
 
   return (
     <div className="top-container">
-      <HeaderNav hasLoc={!!coords} />
+      <HeaderNav />
       {
-        coords && venues && started ? (
+        venues && started ? (
           <main></main>
         ) : (
           <main className="loading-placeholder">
