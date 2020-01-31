@@ -5,6 +5,8 @@ import "../css/sliceline.css";
 import pizzaIcon from "../assets/pizza_slice.png";
 
 const Sliceline = () => {
+  const [started, setStarted] = useState(false);
+
   const [coords, setCoords] = useState(null);
   useEffect(() => {
     navigator.geolocation.watchPosition(({ coords }) => setCoords(coords));
@@ -16,15 +18,24 @@ const Sliceline = () => {
     <div className="top-container">
       <HeaderNav hasLoc={!!coords} />
       {
-        coords && venues ? (
+        coords && venues && started ? (
           <main></main>
         ) : (
           <main className="loading-placeholder">
             <img src={pizzaIcon} alt="SliceLine Pizza Slice Icon" />
+            <button 
+              className="start-button"
+              onClick={e => {
+                e.preventDefault();
+                setStarted(true);
+              }}
+            >
+              Find Pizza!
+            </button>
           </main>
         )
       }
-      <footer>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></footer>
+      <footer className="icon-attribution">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></footer>
     </div>
   )
 };

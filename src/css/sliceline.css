@@ -25,16 +25,41 @@
 }
 
 .header-nav h1 img {
-  width: 30px;
+  width: 40px;
   display: inline-block;
+  padding: 0 5px;
 } 
 
 .loading-placeholder {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .loading-placeholder img {
   max-height: 60vh;
   width: auto;
+  margin-bottom: 40px;
+}
+
+.start-button {
+  padding: 6px 12px;
+  background-color: red;
+  color: gold;
+  font-size: 22px;
+  border-radius: 30px;
+  border: 5px solid red;
+  transition: all ease-in-out 0.3s;
+}
+
+.start-button:hover {
+  cursor: pointer;
+  background-color: gold;
+  color: red;
+}
+
+.icon-attribution {
+  align-self: flex-end;
+  margin-right: 10px;
+  font-size: 12px;
 }
