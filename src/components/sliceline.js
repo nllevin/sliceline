@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import HeaderNav from "./header_nav";
+import Venue from "./venue";
 import { fetchVenues } from "../util/venue_api_util";
 import "../css/sliceline.css";
 import pizzaIcon from "../assets/pizza_slice.png";
@@ -10,20 +11,32 @@ const Sliceline = () => {
 
   useEffect(() => {
     navigator.geolocation.watchPosition(({ coords }) => {
+      console.log("hiya");
       fetchVenues(coords)
         .then(({ data }) => {
           setVenues(data.response.venues);
         })
         .catch(err => console.log(err));
     });
-  });
+  }, []);
 
   return (
     <div className="top-container">
       <HeaderNav />
       {
         venues && started ? (
-          <main></main>
+          <main className="venues-index">
+            <h2>Pizza Near You!</h2>
+            <ul>
+              {
+                venues.map(venue => (
+                  <li key={venue.id}>
+                    <Venue venue={venue} />
+                  </li>
+                ))
+              }
+            </ul>
+          </main>
         ) : (
           <main className="loading-placeholder">
             <img src={pizzaIcon} alt="SliceLine Pizza Slice Icon" />

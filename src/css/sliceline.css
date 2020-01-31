@@ -17,11 +17,8 @@
 }
 
 .header-nav h1 {
-  font-size: 44px;
-}
-
-.header-nav h1 {
   color: red;
+  font-size: 44px;
 }
 
 .header-nav h1 img {
@@ -29,6 +26,15 @@
   display: inline-block;
   padding: 0 5px;
 } 
+
+.venues-index {
+  margin-bottom: auto;
+}
+
+.venues-index h2 {
+  font-size: 30px;
+  color: red;
+}
 
 .loading-placeholder {
   display: flex;
