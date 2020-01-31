@@ -58,6 +58,10 @@
   color: red;
 }
 
+.start-button.inactive {
+  cursor: wait;
+}
+
 .icon-attribution {
   align-self: flex-end;
   margin-right: 10px;

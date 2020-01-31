@@ -28,7 +28,7 @@ const Sliceline = () => {
           <main className="loading-placeholder">
             <img src={pizzaIcon} alt="SliceLine Pizza Slice Icon" />
             <button 
-              className="start-button"
+              className={started ? "start-button inactive" : "start-button"}
               onClick={e => {
                 e.preventDefault();
                 setStarted(true);
