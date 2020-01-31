@@ -1,0 +1,40 @@
+.top-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-nav {
+  width: 100%;
+  height: 75px;
+  border-bottom: 5px solid red;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: gold;
+}
+
+.header-nav h1 {
+  font-size: 44px;
+}
+
+.header-nav h1 {
+  color: red;
+}
+
+.header-nav h1 img {
+  width: 30px;
+  display: inline-block;
+} 
+
+.loading-placeholder {
+  display: flex;
+  justify-content: center;
+}
+
+.loading-placeholder img {
+  max-height: 60vh;
+  width: auto;
+}
