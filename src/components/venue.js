@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { fetchVenueDetails } from "../util/venue_api_util";
+import pizzaIcon from "../assets/pizza_slice.png";
+import "../css/venue.css";
 
 const Venue = ({ venue }) => {
   const [details, setDetails] = useState(null);
@@ -11,10 +13,8 @@ const Venue = ({ venue }) => {
     const cacheExpired = !cacheExpirationTime || currTime > cacheExpirationTime;
 
     if (cachedDetails && !cacheExpired) {
-      console.log("good");
       setDetails(JSON.parse(cachedDetails));
     } else {
-      console.log("hi");
       fetchVenueDetails(venue.id)
         .then(({ data }) => {
           if (cacheExpired) {
@@ -31,8 +31,26 @@ const Venue = ({ venue }) => {
   
   if (!details) return "";
   return (
-    <div className="venues-details">
-      {details.name}
+    <div className="venue-details-container">
+      <div className="venue-details">
+        <img 
+          className="venue-image"
+          src={details.bestPhoto ? `${details.bestPhoto.prefix}300${details.bestPhoto.suffix}` : pizzaIcon} 
+          alt={`Best of ${details.name}`}
+        />
+        <div className="venue-info">
+          <h3>{details.name}</h3>
+          <h3>{details.contact.formattedPhone}</h3>
+          <h3>{details.location.address}</h3>
+          <h3>Price: {"$".repeat(details.price.tier)}</h3>
+          <h3>Rating: {details.rating || "N/A"}</h3>
+        </div>
+      </div>
+      <div className="pizza-border">
+        <img className="list-image" src={pizzaIcon} alt="SliceLine Pizza Slice Icon" />
+        <img className="list-image" src={pizzaIcon} alt="SliceLine Pizza Slice Icon" />
+        <img className="list-image" src={pizzaIcon} alt="SliceLine Pizza Slice Icon" />
+      </div>
     </div>
   );
 };

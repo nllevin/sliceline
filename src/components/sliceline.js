@@ -11,7 +11,6 @@ const Sliceline = () => {
 
   useEffect(() => {
     navigator.geolocation.watchPosition(({ coords }) => {
-      console.log("hiya");
       fetchVenues(coords)
         .then(({ data }) => {
           setVenues(data.response.venues);
@@ -47,7 +46,7 @@ const Sliceline = () => {
                 setStarted(true);
               }}
             >
-              Find Pizza!
+              Local Pizza!
             </button>
           </main>
         )

@@ -1,0 +1,22 @@
+.venue-details {
+  display: flex;
+  width: 450px;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.venue-image {
+  width: 150px;
+  border-radius: 30px;
+}
+
+.pizza-border {
+  display: flex;
+  margin: 40px 0;
+  justify-content: center;
+}
+
+.list-image {
+  width: 40px;
+  margin: 0 24px;
+}

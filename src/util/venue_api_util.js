@@ -10,7 +10,7 @@ export const fetchVenues = ({ latitude, longitude }) => {
   params.append("client_secret", CLIENT_SECRET);
   params.append("ll", `${latitude},${longitude}`);
   params.append("query", "pizza");
-  params.append("limit", "1");
+  params.append("limit", "10");
   params.append("v", "20200131");
   return axios.get(`https://api.foursquare.com/v2/venues/search?${params.toString()}`);
 };
