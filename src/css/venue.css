@@ -10,6 +10,11 @@
   border-radius: 30px;
 }
 
+.venue-info a:hover {
+  cursor: pointer;
+  color: red;
+}
+
 .pizza-border {
   display: flex;
   margin: 40px 0;

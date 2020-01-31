@@ -39,7 +39,7 @@ const Venue = ({ venue }) => {
           alt={`Best of ${details.name}`}
         />
         <div className="venue-info">
-          <h3>{details.name}</h3>
+          <h3><a href={details.canonicalUrl}>{details.name}</a></h3>
           <h3>{details.contact.formattedPhone}</h3>
           <h3>{details.location.address}</h3>
           <h3>Price: {"$".repeat(details.price.tier)}</h3>
