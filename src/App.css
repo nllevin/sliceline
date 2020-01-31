@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+body, header, footer, h1, div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  text-decoration: none;
+  list-style: none;
+  cursor: inherit;
+  display: block;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Sigmar One', cursive;
+  background-color: lightyellow;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
