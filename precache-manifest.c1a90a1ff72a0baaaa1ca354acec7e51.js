@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9da5f8967ec902286cad1b03e3b7d426",
+    "revision": "c6daa79cc734d10627689771307fd27f",
     "url": "/sliceline/index.html"
   },
   {
-    "revision": "51e639e4cd622ef0f7e2",
+    "revision": "de0c267dca6d5a7d662f",
     "url": "/sliceline/static/css/main.3d081edf.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sliceline/static/js/2.545704d1.chunk.js.LICENSE"
   },
   {
-    "revision": "51e639e4cd622ef0f7e2",
-    "url": "/sliceline/static/js/main.d71402d5.chunk.js"
+    "revision": "de0c267dca6d5a7d662f",
+    "url": "/sliceline/static/js/main.a71fda94.chunk.js"
   },
   {
     "revision": "ff3eaaaee40b7a162244",
