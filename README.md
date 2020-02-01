@@ -2,7 +2,7 @@
 
 [Live site](https://nllevin.github.io/sliceline/)
 
-![Sliceline screenshot]("./sliceline_screenshot.png")
+![Sliceline screenshot](./sliceline_screenshot.png)
 
 ## Inspiration
 
