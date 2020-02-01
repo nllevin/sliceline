@@ -18,6 +18,7 @@ const Venue = ({ venue }) => {
       fetchVenueDetails(venue.id)
         .then(({ data }) => {
           if (cacheExpired) {
+            sessionStorage.clear();
             sessionStorage.setItem("expiration", currTime + 3 * 60 * 60 * 1000);
           }
 
