@@ -1,8 +1,7 @@
 import axios from "axios";
-const keys = require("../config/keys");
 
-const CLIENT_ID = process.env.REACT_APP_CLIENT_ID || keys.CLIENT_ID;
-const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET || keys.CLIENT_SECRET;
+const CLIENT_ID = process.env.REACT_APP_CLIENT_ID || require("../config/keys").CLIENT_ID;
+const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET || require("../config/keys").CLIENT_SECRET;
 
 export const fetchVenues = ({ latitude, longitude }) => {
   const params = new URLSearchParams();
